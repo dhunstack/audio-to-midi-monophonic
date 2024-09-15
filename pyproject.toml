@@ -1,0 +1,45 @@
+[project]
+name = "audio-to-midi-monophonic"
+version = "0.1.0"
+authors = [
+  { name="Anmol Mishra", email="anmol.mishra01@estudiant.upf.edu" },
+]
+description = "Convert audio to monophonic MIDI"
+readme = "README.md"
+requires-python = ">=3.8"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+Homepage = "https://github.com/dhunstack/audio-to-midi-monophonic"
+Issues = "https://github.com/dhunstack/audio-to-midi-monophonic/issues"
+
+
+[tool.poetry]
+name = "audiotomidimonophonic"
+version = "0.1.0"
+authors = ["Anmol Mishra <anmol.mishra01@estudiant.upf.edu>"]
+description = "Convert audio to monophonic MIDI"
+readme = "README.md"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[tool.poetry.dependencies]
+python = "^3.10.14"
+madmom = {git = "https://github.com/CPJKU/madmom.git"}
+crepe = "^0.0.16"
+librosa = "^0.10.2.post1"
+pretty_midi = "^0.2.10"
+numpy = "^1.26.4"
+scipy = "^1.14.1"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
