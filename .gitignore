@@ -4,3 +4,4 @@ ExampleFiles
 testSmallAudio
 poetry.lock
 dist
+test

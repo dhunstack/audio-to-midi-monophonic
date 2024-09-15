@@ -374,6 +374,7 @@ def trim_notes(notes, midi_velocity, trim_threshold=TRIM_THRESHOLD):
             start += 1
         while start < end and midi_velocity[end - 1] < trim_threshold:
             end -= 1
+
         note.start = start
         note.end = end
 
@@ -400,6 +401,9 @@ def make_midi(notes, time):
     midi = pretty_midi.PrettyMIDI()
     instrument = pretty_midi.Instrument(0)
     for note in notes:
+        # Remove too short notes remaining after trimming
+        if note.end-1 <= note.start:
+            continue
         note_instance = pretty_midi.Note(
             velocity=int(round(note.velocity)),
             pitch=int(round(note.pitch)),

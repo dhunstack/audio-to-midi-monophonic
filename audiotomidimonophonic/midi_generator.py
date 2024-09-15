@@ -26,7 +26,6 @@ def run(
     min_split_duration=MIN_SPLIT_DURATION,
     trim_threshold=TRIM_THRESHOLD,
 ):
-
     audio_dir = Path(audio_dir)
 
     if not feature_dir:
@@ -75,12 +74,12 @@ def run(
             frequency,
             confidence,
             rms,
-            segment_threshold=SEGMENT_THRESHOLD,
-            min_note_duration=MIN_NOTE_DURATION,
-            min_velocity=MIN_VELOCITY,
-            onset_threshold=ONSET_THRESHOLD,
-            min_split_duration=MIN_SPLIT_DURATION,
-            trim_threshold=TRIM_THRESHOLD,
+            segment_threshold=segment_threshold,
+            min_note_duration=min_note_duration,
+            min_velocity=min_velocity,
+            onset_threshold=onset_threshold,
+            min_split_duration=min_split_duration,
+            trim_threshold=trim_threshold,
         )
         midi.write(str(file_output_dir / f"{path.stem}.mid"))
 
