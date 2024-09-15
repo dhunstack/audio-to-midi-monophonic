@@ -3,3 +3,4 @@ ExampleFiles
 .DS_Store
 testSmallAudio
 poetry.lock
+dist

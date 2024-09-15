@@ -32,7 +32,7 @@ classifiers = [
 
 [tool.poetry.dependencies]
 python = "^3.10.14"
-madmom = {git = "https://github.com/CPJKU/madmom.git"}
+madmom = "^0.17.dev0"
 crepe = "^0.0.16"
 librosa = "^0.10.2.post1"
 pretty_midi = "^0.2.10"
