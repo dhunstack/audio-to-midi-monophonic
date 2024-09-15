@@ -1,6 +1,13 @@
 import os
 import pickle
-from config import CONFIDENCE_PATH, FREQUENCY_PATH, ONSET_ACTIVATIONS_PATH, RMS_PATH, TIME_PATH
+from .config import (
+    CONFIDENCE_PATH,
+    FREQUENCY_PATH,
+    ONSET_ACTIVATIONS_PATH,
+    RMS_PATH,
+    TIME_PATH,
+)
+
 
 def create_dir_if_not_exist(directory):
     """
@@ -14,6 +21,7 @@ def create_dir_if_not_exist(directory):
     """
 
     return os.makedirs(directory) if not os.path.exists(directory) else None
+
 
 def save_all_features(directory, onset_activations, time, frequency, confidence, rms):
     """
@@ -71,6 +79,7 @@ def dump_pickle(file, data):
     with open(file, "wb") as f:
         pickle.dump(data, f)
     return None
+
 
 def load_pickle(file):
     """

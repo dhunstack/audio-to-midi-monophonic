@@ -2,7 +2,7 @@ import pretty_midi
 import numpy as np
 import librosa
 import scipy
-from config import (
+from .config import (
     SEGMENT_THRESHOLD,
     MIN_NOTE_DURATION,
     MIN_VELOCITY,

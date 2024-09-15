@@ -1,9 +1,9 @@
 from argparse import ArgumentParser, RawDescriptionHelpFormatter
 from pathlib import Path
-from fileio import load_all_features
-from config import OUTPUT_DIR_NAME
-from midi_framework import features_to_midi
-from feature_extractor import run as features_extractor_run
+from .fileio import load_all_features
+from .config import OUTPUT_DIR_NAME
+from .midi_framework import features_to_midi
+from .feature_extractor import run as features_extractor_run
 
 
 def run(audio_dir):
