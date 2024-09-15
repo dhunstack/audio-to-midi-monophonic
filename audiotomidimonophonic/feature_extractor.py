@@ -62,7 +62,7 @@ def main():
     The features include onset times, time, frequency, confidence and RMS energy.
 
     Usage:
-    python main.py <path_to_audio_dir_or_file>
+    python feature_extractor.py <path_to_audio_dir_or_file>
     """
 
     parser = ArgumentParser(

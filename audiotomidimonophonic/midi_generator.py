@@ -106,7 +106,7 @@ def main():
     python midi_generator.py <path_to_audio_dir>
     """
 
-    parser = ArgumentParser()
+    parser = ArgumentParser(description=main.__doc__, formatter_class=RawDescriptionHelpFormatter)
     parser.add_argument(
         "audio_dir", type=Path, help="Path to the directory containing audio files"
     )
