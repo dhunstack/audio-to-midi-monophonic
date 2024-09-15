@@ -1,5 +1,6 @@
 import os
 import pickle
+import json
 from .config import (
     CONFIDENCE_PATH,
     FREQUENCY_PATH,
@@ -94,3 +95,19 @@ def load_pickle(file):
     with open(file, "rb") as f:
         data = pickle.load(f)
     return data
+
+
+def save_json(file, data):
+    """
+    Save data to JSON file
+
+    Args:
+        file (str): File path
+        data (dict): Data to be saved
+
+    Returns:
+        None
+    """
+    with open(file, "w") as f:
+        json.dump(data, f, indent=4)
+    return None
